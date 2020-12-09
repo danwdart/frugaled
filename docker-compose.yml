@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=frugaled
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=frugaled
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d

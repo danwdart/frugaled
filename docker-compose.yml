@@ -8,3 +8,6 @@ services:
       - POSTGRES_DB=frugaled
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
+  app:
+    image: dandart/frugaled
+    build: .
